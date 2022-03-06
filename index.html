@@ -1,0 +1,155 @@
+<!-- this is open source (please don't steal or I will cry) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- METAS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICON -->
+    <link rel="icon" href="./assets/favicon.png" type="image" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./font/stylesheet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- MISC -->
+    <title>Home · Hyperfy</title>
+    <div class="top"></div>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="nav-img-container">
+            <img
+              class="nav-img"
+              src="./assets/logo-transparent.gif"
+              width="112"
+              height="112"
+              onclick="nav.home();"
+            />
+          </div>
+          <div class="nav-text" onclick="nav.home();">>Hyperfy</div>
+        </div>
+        <div class="nav-items">
+          <ul class="nav-ul">
+            <li class="nav-link">
+              <a class="nav-active nav-item nav-home-link" onclick="nav.home();"
+                >Home</a
+              >
+            </li>
+            <li class="nav-link">
+              <a class="nav-item nav-about-link" onclick="nav.about();"
+                >About</a
+              >
+            </li>
+            <li class="nav-link">
+              <a class="nav-item nav-join-link" onclick="nav.discord();"
+                >Discord
+              </a>
+            </li>
+            <li class="nav-link">
+              <a class="nav-item nav-support-link" onclick="nav.support();"
+                >Support</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="intro">
+      <div
+        class="intro"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+      >
+        <img src="./assets/logo-transparent.gif" width="300" height="300" />
+        <h1>Hyperfy</h1>
+      </div>
+      <div
+        class="description"
+        data-aos="fade-left"
+        data-aos-delay="600"
+        data-aos-duration="1000"
+      >
+        <h2 class="description-text"></h2>
+      </div>
+    </section>
+    <div class="about-top" id="about-top"></div>
+    <section class="about">
+      <div class="about-container">
+        <h2 class="about-title">About <em>Hyperfy</em></h2>
+        <div class="about-text-container">
+          <div
+            class="about-text"
+            data-aos="fade-down"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <em>Hyperfy</em> is a Discord server founded on the 2nd of October,
+            2021 with the single goal of providing another community to
+            Hypixel Skyblock, a gamemode on the Hypixel Network in Minecraft,
+            while also offering help and carries inside the gamemode to those who need it.
+          </div>
+          <div
+            class="carry-status"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <!-- <span>🟢 Carry Status 🟢</span> -->
+            <span>🟡 Carry Status 🟡</span>
+            <!-- <span>🔴 Carry Status 🔴</span> -->
+            <br />
+            <br />
+            Ticket Tool is currently unavailable so please ping the Floor or Slayer
+            you'd like to get carried in inside the corresponding channel with your
+            In-Game Name. Thank you!
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="support">
+      <div class="support-container">
+        <h2
+          class="support-title"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
+          Need Help?
+        </h2>
+        <a
+          href="./help"
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          >Contact Staff!</a
+        >
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-text">
+          Hyperfy Copyright 2022
+          <br />
+          All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!-- JS -->
+    <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
