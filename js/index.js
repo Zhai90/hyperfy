@@ -34,7 +34,7 @@ window.onscroll = () => {
 
 var text = document.querySelector(".description-text");
 var string =
-  "A community driven Discord server that aims to provide top quality and high speed dungeon carries in Hypixel Skyblock for the lowest price.";
+  "A community driven Discord server that aims to provide top quality and high speed carries in Hypixel Skyblock for the lowest price.";
 string.split("");
 var i = 0,
   length = string.length;
