@@ -16,8 +16,20 @@ const nav = {
     console.log("Tab Opened with link!");
   },
   support: function () {
-    window.location.replace("../help")
+    window.location.replace("../help");
     console.log("Attempted to redirect to Support!");
+  },
+  dropdown: function () {
+    let d = document.querySelector(".nav-link:nth-child(5)")
+    d.classList.toggle("dropdown");
+    if(d.classList.contains("dropdown")) {
+      let n = document.querySelector("nav")
+      n.style.height = "26vh";
+    }else{
+      let n = document.querySelector("nav")
+      n.style.height = "12vh";
+    }
+    console.log("Dropdowned");
   },
 };
 

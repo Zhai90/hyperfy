@@ -60,7 +60,7 @@ a {
 /** navbar **/
 
 nav {
-  position: sticky;
+  position: fixed;
   display: flex;
   justify-content: center;
   top: 0;
@@ -74,7 +74,7 @@ nav {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  transition: all 0.5s linear;
+  transition: all .25s;
 }
 
 .scrolled {
@@ -129,6 +129,9 @@ ul.nav-ul {
 
 li.nav-link {
   padding: 0 30px 0 30px;
+}
+
+li.nav-link.non-dd {
   font-size: 2em;
 }
 
@@ -138,7 +141,7 @@ a.nav-support-link {
   cursor: pointer;
 }
 
-.nav-link:hover {
+.nav-item:hover {
   transform: translateY(-1px);
   text-shadow: -2px -2px 1px #dc3979, 2px -2px 1px #dc3979, -2px 2px 1px #dc3979,
     2px 2px 1px #dc3979;
@@ -148,6 +151,44 @@ a.nav-support-link {
   text-shadow: -2px -2px 1px #dc3979, 2px -2px 1px #dc3979, -2px 2px 1px #dc3979,
     2px 2px 1px #dc3979;
 }
+
+/** mostly responsiveness (🤮) **/
+
+a.nav-dropdown-link img {
+  font-family: sans-serif;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  margin-bottom: -10px;
+}
+
+.nav-ul .nav-link:nth-child(5) {
+  position: relative;
+}
+
+.nav-ul .nav-link:nth-child(5) .nav-ul {
+  display: none;
+}
+
+.nav-ul .nav-link:nth-child(5).dropdown .nav-ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column;
+  position: absolute;
+  font-size: 1em!important;
+  top: -85px;
+  left: -37.5vw;
+}
+
+.nav-ul .nav-link:nth-child(5).dropdown .nav-ul .nav-link {
+  margin: 10px;
+  font-size: 2em;
+}
+
+
 
 /** body **/
 
@@ -207,7 +248,7 @@ section.intro .description h2 {
 }
 
 section.intro .description-text span {
-  transition: all 1s cubic-bezier(0,.45,0,1);
+  transition: all 1s cubic-bezier(0, 0.45, 0, 1);
 }
 
 section.intro .description-text span:hover {
@@ -298,4 +339,144 @@ footer .footer-container {
 
 footer .footer-text {
   text-align: center;
+}
+
+/** responsiveness (copium) (I hate this) (please help me) (jarvis nooOOOO) (I am deppressed) (please help me)!))(E*)**/
+
+@media screen and (max-width: 575.98px) {
+  section.intro {
+    flex-flow: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  div.intro h1 {
+    font-size: 3.75em;
+  }
+
+  section.intro .description {
+    padding-bottom: 50px;
+  }
+
+  section.intro .description-text {
+    width: 70vw !important;
+  }
+
+  section.about .about-text {
+    width: 90%;
+  }
+
+  section.about .carry-status {
+    width: 60%;
+  }
+  .nav-ul .nav-link:nth-child(1).non-dd,
+  .nav-ul .nav-link:nth-child(2).non-dd,
+  .nav-ul .nav-link:nth-child(3).non-dd,
+  .nav-ul .nav-link:nth-child(4).non-dd {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section.intro {
+    flex-flow: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  section.intro .description {
+    padding-bottom: 50px;
+  }
+
+  section.intro .description-text {
+    width: 70vw !important;
+  }
+
+  section.about .about-text {
+    width: 90%;
+  }
+
+  section.about .carry-status {
+    width: 60%;
+  }
+  .nav-ul .nav-link:nth-child(1).non-dd,
+  .nav-ul .nav-link:nth-child(2).non-dd,
+  .nav-ul .nav-link:nth-child(3).non-dd,
+  .nav-ul .nav-link:nth-child(4).non-dd {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  section.intro {
+    flex-flow: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  section.intro .description {
+    padding-bottom: 50px;
+  }
+
+  section.intro .description-text {
+    width: 70vw !important;
+  }
+
+  section.about .about-text {
+    width: 90%;
+  }
+
+  section.about .carry-status {
+    width: 60%;
+  }
+  .nav-ul .nav-link:nth-child(1).non-dd,
+  .nav-ul .nav-link:nth-child(2).non-dd,
+  .nav-ul .nav-link:nth-child(3).non-dd,
+  .nav-ul .nav-link:nth-child(4).non-dd {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .nav-ul .nav-link:nth-child(1).non-dd,
+  .nav-ul .nav-link:nth-child(2).non-dd,
+  .nav-ul .nav-link:nth-child(3).non-dd,
+  .nav-ul .nav-link:nth-child(4).non-dd {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  div.nav-text {
+    padding: 0px;
+  }
+
+  div.nav-brand {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2.75em;
+  }
+
+  .nav-ul .nav-link:nth-child(5) {
+    display: none;
+  }
+
+  li.nav-link {
+    padding: 0 15px 0 15px;
+    font-size: 2em;
+  }
+  nav {
+    height: 12vh!important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav-ul .nav-link:nth-child(5) {
+    display: none;
+  }
+  nav {
+    height: 12vh!important;
+  }
 }
