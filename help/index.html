@@ -24,7 +24,7 @@
     <div class="top"></div>
   </head>
   <body>
-    <nav>
+    <nav class="nav">
       <div class="nav-container">
         <div class="nav-brand">
           <div class="nav-img-container">
@@ -40,25 +40,58 @@
         </div>
         <div class="nav-items">
           <ul class="nav-ul">
-            <li class="nav-link">
-              <a class="nav-item nav-home-link" onclick="nav.home();">Home</a>
+            <li class="nav-link non-dd">
+              <a class="nav-item nav-home-link" onclick="nav.home();"
+                >Home</a
+              >
             </li>
-            <li class="nav-link">
+            <li class="nav-link non-dd">
               <a class="nav-item nav-about-link" onclick="nav.about();"
                 >About</a
               >
             </li>
-            <li class="nav-link">
+            <li class="nav-link non-dd">
               <a class="nav-item nav-join-link" onclick="nav.discord();"
                 >Discord
               </a>
             </li>
-            <li class="nav-link">
-              <a
-                class="nav-active nav-item nav-support-link"
-                onclick="nav.support();"
+            <li class="nav-active nav-link non-dd">
+              <a class="nav-item nav-support-link" onclick="nav.support();"
                 >Support</a
               >
+            </li>
+            <li class="nav-link">
+              <a class="nav-item nav-dropdown-link" onclick="nav.dropdown();">
+                <img src="../assets/dropdown.png" width="64" height="64" />
+                <div class="nav-dropdown-container">
+                  <ul class="nav-ul">
+                    <li class="nav-link">
+                      <a
+                        class="nav-active nav-item nav-home-link"
+                        onclick="nav.home();"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a class="nav-item nav-about-link" onclick="nav.about();"
+                        >About</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a class="nav-item nav-join-link" onclick="nav.discord();"
+                        >Discord
+                      </a>
+                    </li>
+                    <li class="nav-link">
+                      <a
+                        class="nav-item nav-support-link"
+                        onclick="nav.support();"
+                        >Support</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
@@ -106,7 +139,10 @@
     <script>
       AOS.init();
     </script>
-    <script src="https://kit.fontawesome.com/8acfd339ec.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8acfd339ec.js"
+      crossorigin="anonymous"
+    ></script>
     <footer>
       <div class="footer-container">
         <div class="footer-text">

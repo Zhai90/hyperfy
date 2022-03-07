@@ -53,3 +53,12 @@ var i = 0,
 for (i; i < length; i++) {
   text.innerHTML += "<span>" + string[i] + "</span>";
 }
+
+// use desktop mode or bald (this code saves you from being bald)
+
+var viewMode = getCookie("view-mode");
+if(viewMode == "desktop"){
+    viewport.setAttribute('content', 'width=1024');
+}else if (viewMode == "mobile"){
+    viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+}
