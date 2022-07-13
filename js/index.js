@@ -35,7 +35,7 @@ const nav = {
 
 const navbar = document.querySelector("nav");
 window.onscroll = () => {
-  if (window.scrollY > 600) {
+  if (window.scrollY > 700) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
@@ -53,3 +53,11 @@ var i = 0,
 for (i; i < length; i++) {
   text.innerHTML += "<span>" + string[i] + "</span>";
 }
+
+// copy ip (for the smp, chill I'm not ip grabbing)
+
+function smpip() {
+  navigator.clipboard.writeText('hyperfy.apexmc.co');
+  document.querySelector(".smp-copied").style = "color: rgba(0, 0, 0, 1);";
+  setTimeout(() => {  document.querySelector(".smp-copied").style = "color: rgba(0, 0, 0, 0);"; }, 1000);
+}  

@@ -5,7 +5,10 @@
     <!-- METAS -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="initial-scale=1.0 user-scalable=no, maximum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0 user-scalable=no, maximum-scale=1.0"
+    />
     <!-- OPENGRAPH -->
     <meta content="Hyperfy - HySB Community" property="og:title" />
     <meta
@@ -116,7 +119,7 @@
         data-aos-delay="200"
         data-aos-duration="1000"
       >
-        <img src="./assets/logo-transparent.gif" width="300" height="300" />
+        <img data-toggle="tooltip" data-placement="top" title="" data-bs-original-title="Click to Copy Server IP!" src="./assets/logo-transparent.gif" width="300" height="300" />
         <h1>Hyperfy</h1>
       </div>
       <div
@@ -128,10 +131,28 @@
         <h2 class="description-text"></h2>
       </div>
     </section>
+    <h2
+      data-aos="fade-down"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      class="smp-title text-center"
+    >
+      Check out our SMP!
+      <br />
+      <br />
+      <img
+        class="smp-banner"
+        onclick="smpip();"
+        src="./assets/banner.gif"
+        width="468"
+        height="60"
+      />
+    </h2>
+    <div class="smp-copied text-center">Copied!</div>
     <div class="about-top" id="about-top"></div>
     <section class="about">
       <div class="about-container">
-        <h2 class="about-title">About <em>Hyperfy</em></h2>
+        <h2 class="about-title">About <em> Hyperfy</em></h2>
         <div class="about-text-container">
           <div
             class="about-text"
@@ -150,14 +171,12 @@
             data-aos-delay="200"
             data-aos-duration="1000"
           >
-            <!-- <span>🟢 Carry Status 🟢</span> -->
-            <span>🟡 Carry Status 🟡</span>
-            <!-- <span>🔴 Carry Status 🔴</span> -->
+            <span>🟩 Carry Status 🟩</span>
+            <!-- <span>🟨 Carry Status 🟨</span> -->
+            <!-- <span>🔴 Carry Status 🟥</span> -->
             <br />
             <br />
-            Ticket Tool is currently unavailable so please ping the Floor or
-            Slayer you'd like to get carried in inside the corresponding channel
-            with your In-Game Name. Thank you!
+            Our Carry System is currently running and functioning as intended.
           </div>
         </div>
       </div>
@@ -181,9 +200,9 @@
           All Rights Reserved
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
     <!-- JS -->
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script

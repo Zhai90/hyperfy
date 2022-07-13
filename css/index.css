@@ -29,8 +29,6 @@ a {
   display: none;
 }
 
-
-
 /** framework **/
 
 .text-center {
@@ -54,7 +52,7 @@ nav {
   justify-content: center;
   top: 0;
   left: 0;
-  background: #744cfc;
+  background: rgba(255, 255, 255, 0.2);
   width: 100%;
   height: 12vh;
   z-index: 9999;
@@ -64,10 +62,7 @@ nav {
   -webkit-user-select: none;
   -ms-user-select: none;
   transition: all 0.25s;
-}
-
-.scrolled {
-  background-color: #dc3979;
+  border-bottom: 5px solid black;
 }
 
 .scrolled2 {
@@ -180,10 +175,13 @@ a.nav-dropdown-link img {
 
 /** intro **/
 section.intro {
-  background: #744cfc;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 780px;
+  background: rgb(220, 57, 121);
+  background: linear-gradient(
+    0deg,
+    rgba(220, 57, 121, 1) 0%,
+    rgba(116, 76, 252, 1) 100%
+  );
+  height: 880px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -192,8 +190,7 @@ section.intro {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  margin-top: -5px;
+  padding-top: 70px;
 }
 
 section.intro div.intro {
@@ -238,8 +235,45 @@ section.intro .description-text span {
 }
 
 section.intro .description-text span:hover {
-  text-shadow: -2px -2px 1px #dc3979, 2px -2px 1px #dc3979, -2px 2px 1px #dc3979,
-    2px 2px 1px #dc3979;
+  text-shadow: -2px -2px 1px #744cfc, 2px -2px 1px #744cfc, -2px 2px 1px #744cfc,
+    2px 2px 1px #744cfc;
+}
+
+/** smp **/
+
+.smp-title {
+  font-size: 2em;
+}
+
+.smp-banner {
+  border-radius: 12px;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  border: 3px solid black;
+  transition: all 0.5s;
+}
+
+.smp-banner:hover {
+  -webkit-box-shadow: 0px 0px 0px 3px #000000, 0px 0px 0px 6px #610c5d,
+    0px 0px 0px 8px #9b0ca0, 0px 0px 0px 10px #b12492, 0px 0px 0px 12px #ff00aa,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 3px #000000, 0px 0px 0px 6px #610c5d,
+    0px 0px 0px 8px #9b0ca0, 0px 0px 0px 10px #b12492, 0px 0px 0px 12px #ff00aa,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background: #000000;
+}
+
+.smp-copied {
+  color: rgba(255, 255, 255, 0);
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  transition: all 0.5s;
 }
 
 /** about **/
@@ -303,6 +337,7 @@ section.support .support-title {
 
 section.support a {
   font-size: 2em;
+  transition: all 0.5s;
 }
 
 section.support a:hover {

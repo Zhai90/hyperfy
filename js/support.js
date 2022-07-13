@@ -31,12 +31,3 @@ const nav = {
     console.log("Dropdowned");
   },
 };
-
-const navbar = document.querySelector("nav");
-window.onscroll = () => {
-  if (window.scrollY > 600) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-};
